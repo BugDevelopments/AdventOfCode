@@ -23,7 +23,6 @@ def main():
     # return set of numbers in the neighbourhood of (i,j) 
     return { loc.get(x,None) for x in N }-{None}
      
-  
   # compute sum of of gear ratios (=product of neighbouring two numbers) 
   sum = 0
   for i in range(len(lines)):
@@ -34,7 +33,6 @@ def main():
           x,y = nums
           sum += int(x.group())*int(y.group())
   print(sum)
-
 
 if __name__ == "__main__":
   main()

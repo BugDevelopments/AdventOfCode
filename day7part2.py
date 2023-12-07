@@ -41,11 +41,12 @@ def handrankWithJoker(h):
    v=h.translate(str.maketrans("JTQKA","1BCDE")) # makes hands lexicographically comparable 
    return vr+v
 
-input_file = 'input7.txt'
-lines = readInputFile(input_file)
-lines = [l.split() for l in lines]
-lines_sorted = sorted(lines,key=lambda x: handrankWithJoker(x[0]))
-print(sum((e+1)*int(h[1]) for e,h in enumerate(lines_sorted)))
+def main():
+  input_file = 'input7.txt'
+  lines = readInputFile(input_file)
+  lines = [l.split() for l in lines]
+  lines_sorted = sorted(lines,key=lambda x: handrankWithJoker(x[0]))
+  print(sum((e+1)*int(h[1]) for e,h in enumerate(lines_sorted)))
 
-#if __name__ == '__main__':
-#   main()
+if __name__ == '__main__':
+  main()

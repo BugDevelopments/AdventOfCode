@@ -36,7 +36,7 @@ def handtype(h):
    # high card
    return '1'
 
-# It holds for any two hands h1, h2 that h1 is ranked higher than h2 iff handrank(h1) < handrank(h2) 
+# It holds for any two hands h1, h2 that h1 is ranked lower than h2 iff handrank(h1) < handrank(h2) 
 def handrank(h):
    v=h.translate(str.maketrans("TJQKA","ABCDE")) # makes hands lexicographically comparable 
    return handtype(h)+v 

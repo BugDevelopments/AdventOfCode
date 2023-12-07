@@ -35,7 +35,7 @@ def handtype(h):
    # high card
    return '1'
 
-# It holds for any two hands h1, h2 that h1 is ranked higher than h2 with Jokers iff handrankWithJoker(h1) < handrankWithJoker(h2) 
+# It holds for any two hands h1, h2 that h1 is ranked lower than h2 with Jokers iff handrankWithJoker(h1) < handrankWithJoker(h2) 
 def handrankWithJoker(h):
    vr = max(handtype(h.replace('J',c)) for c in '23456789TJQKA') # handtype of the best Joker substitution
    v=h.translate(str.maketrans("JTQKA","1BCDE")) # makes hands lexicographically comparable 

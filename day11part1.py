@@ -23,4 +23,4 @@ def distance(P,Q):
   return d
 
 galaxies = [(i,j) for i in range(M) for j in range(N) if lines[i][j]=='#']
-print(sum( distance(P,Q) for P in galaxies for Q in galaxies)//2)
+print(sum( distance(P,Q) for P in galaxies for Q in galaxies if P<Q))

@@ -6,7 +6,6 @@ def deflect(c,d,loc):
   if c=='-':
     return [((i,j+y),(0,y))] if y else [((i,j+x),(0,x)),((i,j-x),(0,-x))]
   if c=='/':
-    (0,1)
     return [((i-y,j-x),(-y,-x))]
   if c=='\\':
     return [((i+y,j+x),(y,x))]

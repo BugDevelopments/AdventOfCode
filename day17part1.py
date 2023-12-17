@@ -31,7 +31,7 @@ def findShortestDistance(G):
     for (u,v,a,b) in nb(x,y,i,j):
       c = d+G[a][b]
       if c<dist[(u,v,a,b)]:
-        dist[(u,v,a,b)] = d
+        dist[(u,v,a,b)] = c
         heappush(pq,(c,u,v,a,b))
 
 def readInputFile(input_file):

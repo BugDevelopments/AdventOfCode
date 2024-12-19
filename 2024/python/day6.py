@@ -86,7 +86,7 @@ def initialize_map(preloaded_map):
 def part2():
     map_c = map_configuration()
     # we only need to check points on the path the guard walks, not on positions the guard never reaches anyway
-    points_to_check = get_path(map_c)
+    points_to_check = get_path(map_c)-{map_configuration.start_position}
 
     # using multiprocessing
     # Determine the number of processes to use (leave one core free for the system)
